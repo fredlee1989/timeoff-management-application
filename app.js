@@ -90,8 +90,9 @@ app.use( require('./lib/middleware/flash_messages') );
 
 app.use( require('./lib/middleware/session_aware_redirect') );
 
-// Here will be publicly accessible routes
 
+////////////////////////////////////////////////////////////////////
+// Here will be publicly accessible routes
 app.use(
   '/feed/',
   require('./lib/route/feed')
@@ -110,7 +111,10 @@ app.use(
   require('./lib/route/dashboard')
 );
 
-app.use('/api/v1/', require('./lib/route/api'));
+app.use(
+  '/api/v1/',
+  require('./lib/route/api')
+);
 
 app.use(
   '/calendar/',
