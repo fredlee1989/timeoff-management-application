@@ -1,9 +1,8 @@
-
-# TimeOff.Management
+# EMS - Employee Management System
 
 Web application for managing employee absences.
 
-<a href="https://travis-ci.org/timeoff-management/timeoff-management-application"><img align="right" src="https://travis-ci.org/timeoff-management/timeoff-management-application.svg?branch=master" alt="Build status" /></a>
+Based on <a href="https://github.com/timeoff-management/timeoff-management-application">TimeOff.Management</a> source code and adding some customizations for Globee.
 
 ## Features
 
@@ -31,11 +30,11 @@ Create calendar feeds for individuals, departments or entire company.
 
 **Three Steps Workflow**
 
-Employee requests time off or revokes existing one.
+1. Employee requests time off or revokes existing one.
 
-Supervisor gets email notification and decides about upcoming employee absence.
+2. Supervisor gets email notification and decides about upcoming employee absence.
 
-Absence is accounted. Peers are informed via team view or calendar feeds.
+3. Absence is accounted. Peers are informed via team view or calendar feeds.
 
 **Access control**
 
@@ -66,27 +65,15 @@ Email notification to all involved parties.
 
 Optionally allow employees to see the time off information of entire company regardless of department structure.
 
-## Screenshots
-
-![TimeOff.Management Screenshot](https://raw.githubusercontent.com/timeoff-management/application/master/public/img/readme_screenshot.png)
-
 ## Installation
-
-### Cloud hosting
-
-Visit http://timeoff.management/
-
-Create company account and use cloud based version.
 
 ### Self hosting
 
-Install TimeOff.Management application within your infrastructure:
+Install application within your infrastructure:
 
-(make sure you have Node.js (>=4.0.0) and SQLite installed)
+(make sure you have Node.js (>=18.0.0) and SQLite installed)
 
 ```bash
-git clone https://github.com/timeoff-management/application.git timeoff-management
-cd timeoff-management
 npm install
 npm start
 ```
@@ -110,28 +97,26 @@ USE_CHROME=1 npm test
 
 Any bug fixes or enhancements should have good test coverage to get them into "master" branch.
 
-## Updating existing instance with new code
-
-In case one needs to patch existing instance of TimeOff.Managenent application with new version:
-
-```bash
-git fetch
-git pull origin master
-npm install
-npm run-script db-update
-npm start
-```
-
 ## How to?
 
-There are some customizations available.
+### Setting up the application
 
-## How to amend or extend colours available for colour picker?
-Follow instructions on [this page](docs/extend_colors_for_leave_type.md).
+Step-by-step guide to set up and customise solution to the needs of your company.
+
+Follow instructions on [this page](https://timeoff.management/setting-up-timeoff-management/setting-up-timeoff.html).
+
+### Using the application
+
+How to request leaves, work with Team View and Employee Calendar and many more.
+
+Follow instructions on [this page](https://timeoff.management/using-timeoff-management/using-timeoff-management.html)
 
 ## Customization
 
-There are few options to configure an installation.
+There are some customizations available.
+
+### How to amend or extend colours available for colour picker?
+Follow instructions on [this page](docs/extend_colors_for_leave_type.md).
 
 ### Make sorting sensitive to particular locale
 
@@ -152,8 +137,4 @@ flag to be `true` in the `config/app.json` file.
 ## Use Redis as a sessions storage
 
 Follow instructions on [this page](docs/SessionStoreInRedis.md).
-
-## Feedback
-
-Please report any issues or feedback to <a href="https://twitter.com/FreeTimeOffApp">twitter</a> or Email: pavlo at timeoff.management
 
